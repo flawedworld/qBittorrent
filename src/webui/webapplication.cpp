@@ -402,7 +402,7 @@ void WebApplication::configure()
     m_isHttpsEnabled = pref->isWebUiHttpsEnabled();
 
     m_prebuiltHeaders.clear();
-    m_prebuiltHeaders.push_back({Http::HEADER_X_XSS_PROTECTION, u"1; mode=block"_qs});
+    m_prebuiltHeaders.push_back({Http::HEADER_X_XSS_PROTECTION, u"0"_qs});
     m_prebuiltHeaders.push_back({Http::HEADER_X_CONTENT_TYPE_OPTIONS, u"nosniff"_qs});
 
     if (!m_isAltUIUsed)
